@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/_head.ejs') %>
+<title>Document</title>
+</head>
+<body>
+    <section class="container col s12">
+        <h4>Login</h4>
+        <form id="grimageLogin" class="container col s6">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+              </div>
+<!--               <input type="submit" class="waves-effect waves-light btn" value="Login"/> -->
+          <a href="/signup">Submit </a>
+        </form>
+    </section>
+    <script src="grimageLogin.js"></script>
+</body>
+</html>
+
+
