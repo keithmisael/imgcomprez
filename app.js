@@ -1,15 +1,19 @@
 const express = require('express');
 const app = express();
+const mainRouter = require('./routes/router')
 const port = 8080;
 
+// Template
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-  res.render('index')
-})
+// Home page route
+app.get('/',(req, res) => res.render('index', {title: 'Home'}))
 
+// Main router
+app.use(mainRouter)
 
-app.listen(port, error => {
+// Server
+app.listen(process.env.PORT || port, error => {
   if (error)
     throw error;
   else
