@@ -7,10 +7,13 @@ const port = 8080;
 app.set('view engine', 'ejs');
 
 // Home page route
-app.get('/',(req, res) => res.render('index', {title: 'Home'}))
+app.get('/',(req, res) => res.render('index', {title: 'Home'}));
+
+app.use(express.urlencoded({extended:true}))
 
 // Main router
-app.use(mainRouter)
+app.use(mainRouter);
+
 
 // Server
 app.listen(process.env.PORT || port, error => {

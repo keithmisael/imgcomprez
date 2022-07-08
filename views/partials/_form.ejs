@@ -1,4 +1,4 @@
-<form class="col l12 offset-s3">
+<form action="/signup" method="POST" class="col l12 offset-s3">
     <h4 class="h4-form"><%= title %></h1>
     <div class="input-field">
        <input type="email" name="email" id="email" placeholder="you@mail.com" class="validate white-text">
@@ -6,7 +6,7 @@
        <span class="helper-text" data-error="Not an email." data-success="Alright!"></span>
     </div>
     <div class="input-field">
-        <input type="password" name="password" id="password" class="validate white-text">
+        <input type="password" name="pass" id="password" class="validate white-text">
         <label for="password">Password</label>
     </div>
     <div class="input-field">
